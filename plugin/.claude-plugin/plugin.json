@@ -1,0 +1,8 @@
+{
+  "name": "fintech",
+  "version": "0.1.0",
+  "description": "Diagnóstico financiero de una empresa: análisis vertical/horizontal, ratios, múltiplos de mercado, WACC/EVA e informes escritos. Núcleo de entrega de FinTarget.",
+  "author": { "name": "Luis D. Peñaranda" },
+  "homepage": "https://github.com/Hyper-Target/FinTarget",
+  "keywords": ["finance", "financial-analysis", "ratios", "wacc", "valuation", "sec-edgar"]
+}

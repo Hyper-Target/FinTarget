@@ -1,0 +1,7 @@
+{
+  "name": "FinTarget",
+  "owner": { "name": "Hyper-Target" },
+  "plugins": [
+    { "name": "fintech", "source": "./plugin", "description": "Diagnóstico financiero de una empresa: ratios, múltiplos, WACC/EVA e informes. Núcleo de entrega de FinTarget." }
+  ]
+}

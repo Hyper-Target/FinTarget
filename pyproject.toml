@@ -1,0 +1,20 @@
+[project]
+name = "fintarget"
+version = "0.0.1"
+description = "Diagnóstico financiero reproducible y explicable para cualquier empresa"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas", "numpy", "scikit-learn", "lightgbm", "shap",
+  "requests", "openpyxl", "matplotlib", "pyarrow",
+]
+
+[project.optional-dependencies]
+nlp = ["torch", "transformers", "datasets"]
+dev = ["pytest", "ruff", "mlflow", "jupyter"]
+
+[project.scripts]
+fintarget = "fintarget.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
