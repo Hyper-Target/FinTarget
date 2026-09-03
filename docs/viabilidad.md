@@ -95,7 +95,7 @@ formato. El plugin agrega un **comando orquestador**:
   =>  un solo dossier por empresa: lo escrito de 1, lo numérico de 3-5, el modelo de 6
 ```
 
-Esto es la "capa de entrega al analista". El repo `FinTarget` es la "capa de ciencia de datos" (pipeline +
+Esto es la "capa de entrega al analista". El repo `FinTarget` es la "capa de ciencia de datos" (flujo +
 modelos + notebooks). Se conectan por el CLI `fintarget score`. El *scaffold* del plugin está en
 [`../plugin/`](../plugin/).
 
@@ -136,7 +136,7 @@ Es la contribución original de la propuesta y también la de mayor riesgo:
 
 | Dice | Debería decir |
 |---|---|
-| "alternativa abierta a una terminal de datos de pago" | "pipeline auditable para un conjunto definido de empresas, con cada dato trazable a su fuente" |
+| "alternativa abierta a una terminal de datos de pago" | "flujo auditable para un conjunto definido de empresas, con cada dato trazable a su fuente" |
 | "para cualquier empresa, cotice o no" | "para empresas que reportan a la SEC (modo cotizada) o a Supersociedades (modo privada); otras jurisdicciones quedan fuera de la Fase 1" |
 | "flujo de noticias" como capa central | "capa experimental de noticias; el núcleo son ratios + narrativa del 10-K" |
 

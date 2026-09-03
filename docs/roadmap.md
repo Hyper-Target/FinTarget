@@ -15,6 +15,21 @@ El proyecto se construye de adentro hacia afuera: primero el motor determinista 
 | **4 · Servicio y observabilidad** | Backend (API `/score`). Frontend (tablero heredero del de VISA). Tablero tipo Dagster con los DAGs de ingesta, *features*, entrenamiento y monitoreo de *drift*. | Pendiente | 3–4 semanas |
 | **5 · Casos y cierre** | TGLS y Ecopetrol de extremo a extremo. Modo empresa privada sobre un caso anonimizado real. Informe final y *model card*. | Pendiente | 2 semanas |
 
+### Extensión al mercado colombiano y a empresas no cotizadas
+
+Es una línea prioritaria, no un extra. La mayoría de las compañías de una junta directiva en
+Colombia no cotizan en bolsa: no tienen precio de acción ni informes públicos. FinTarget las
+cubre con lo mínimo que toda empresa tiene —**estados financieros, PyG y ratios**— más las fuentes
+locales (**Superintendencia de Sociedades**, notas a los estados) y el costo de capital por el
+método del curso (referencia de sector + prima de riesgo país).
+
+- **Reutiliza las skills que ya existen** (`VerticalAnalysis`, `RatioAnalysis`, `WaccModel`) sobre
+  el Excel de estados de la empresa.
+- **Crear una skill nueva** —`PrivateCoDiagnose` (nombre tentativo)— especializada en la empresa
+  colombiana no cotizada: que sepa leer un juego de estados de Supersociedades y sus notas, ajustar
+  el WACC sin datos de mercado (beta de industria + primas de tamaño, iliquidez y riesgo país) y
+  usar las variantes de Altman para empresa privada. Desarrollo acotado, de alto valor práctico.
+
 ### Qué está verificado hoy
 
 - **SEC EDGAR / XBRL** responde con la serie histórica completa (probado con VISA, CIK 0001403161).

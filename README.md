@@ -2,7 +2,7 @@
 
 **Diagnóstico financiero reproducible y explicable para cualquier empresa — cotice o no en bolsa.**
 
-FinTarget es una tubería de datos parametrizada por empresa que produce, con un comando y de forma auditable,
+FinTarget es un flujo de trabajo de datos parametrizado por empresa que produce, con un comando y de forma auditable,
 el mismo diagnóstico que hoy se arma a mano en Excel: análisis vertical y horizontal, tablero de ratios por
 familia, descomposición DuPont, costo de capital (WACC) y valor económico agregado (EVA), clasificación de
 riesgo (rating estimado / probabilidad de estrés) y una lectura de la narrativa corporativa frente a los
@@ -13,6 +13,9 @@ de un diagnóstico financiero profesional: una alternativa reproducible al traba
 sustentarse ante un comité, una junta o un cliente.
 
 📄 **Sitio del proyecto (descripción completa, arquitectura y datos):** <https://hyper-target.github.io/FinTarget/>
+
+Primer proyecto de **HyperTarget**, una iniciativa de **código abierto** para resolver problemas
+reales de la industria financiera con herramientas públicas, gratuitas y auditables.
 
 ---
 
@@ -49,7 +52,7 @@ INGESTA
    Rating / trayectoria de ratios  +  explicabilidad SHAP  -->  ficha por empresa
 ```
 
-Dos modos sobre la misma tubería: **cotizada** (SEC EDGAR + mercado) y **privada** (Supersociedades + notas
+Dos modos sobre el mismo flujo: **cotizada** (SEC EDGAR + mercado) y **privada** (Supersociedades + notas
 a los estados). La capa de *features* y el modelo son compartidos.
 
 ## Estructura del repositorio

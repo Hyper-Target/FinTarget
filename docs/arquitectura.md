@@ -132,7 +132,7 @@ El tablero para el analista y la junta, heredero directo del tablero interactivo
 
 ## 6 · Orquestación y observabilidad
 
-Tablero tipo **Dagster** para supervisar toda la tubería como un conjunto de DAGs con estado
+Tablero tipo **Dagster** para supervisar todo el flujo como un conjunto de DAGs con estado
 visible:
 
 | DAG | Qué hace | Frecuencia |
