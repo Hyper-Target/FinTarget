@@ -1,0 +1,9 @@
+title: FinTarget
+description: >-
+  Modelo multimodal para el diagnóstico y la proyección de indicadores financieros.
+  Fusiona datos contables (SEC EDGAR) con la narrativa de los informes corporativos
+  y del flujo de noticias, con resultados trazables y explicables.
+theme: jekyll-theme-cayman
+show_downloads: false
+plugins:
+  - jekyll-seo-tag

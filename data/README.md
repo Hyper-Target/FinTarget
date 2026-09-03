@@ -1,7 +1,11 @@
 # Datos de FinTarget
 
-Cinco capas. Solo se versionan en el repo los datasets externos pequeños y de licencia abierta
-(`data/external/`). `data/raw/` y `data/processed/` se generan localmente y están en `.gitignore`.
+Los enlaces directos de descarga de **todas** las fuentes están en el sitio del proyecto:
+<https://hyper-target.github.io/FinTarget/datos.html>
+
+Se versionan los datasets externos pequeños de licencia abierta (`data/external/`), la lista de
+constituyentes del S&P 500 y el universo derivado (`data/processed/universe.csv`). El resto de
+`data/raw/` se re-descarga con los scripts de `fintarget/ingest/`.
 
 | Capa | Fuente | Acceso | Estado |
 |---|---|---|---|
@@ -25,6 +29,15 @@ Licencia de origen: CC BY 4.0.
 *Corporate Credit Rating* (Kaggle: `agewerc/corporate-credit-rating`), vía
 [`Agewerc/ML-Finance`](https://github.com/Agewerc/ML-Finance).
 593 empresas, 2014–2016. 25 ratios. 10 clases (AAA…D). Sin CIK. Se usa para robustez.
+
+## `data/raw/` (no versionado, salvo `sp500_constituents.csv`)
+- `sp500_constituents.csv` — 500 constituyentes con CIK (datasets/s-and-p-500-companies). **Versionado.**
+- `sec_company_tickers.json`, `sec_company_tickers_exchange.json` — mapa ticker→CIK(+bolsa) de la SEC.
+- `nasdaq_screener_all.json` — ~7.100 acciones de EE. UU. con capitalización, sector, industria (Nasdaq screener API).
+
+## `data/processed/`
+- `universe.csv` — universo fusionado (screener + SEC + S&P 500), con `cik`, `size_bucket`
+  (`r1000` / `r2000` / `micro`) y `universo_primario`. Lo genera `fintarget/ingest/build_universe.py`. **Versionado.**
 
 ## Pendiente de traer
 - *US Company Bankruptcy Prediction* (Kaggle: `utkarshx27/...`, CC0) — ~78k empresa-año, 1999–2018.

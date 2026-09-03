@@ -4,10 +4,21 @@ __pycache__/
 .env
 .ipynb_checkpoints/
 mlruns/
-data/raw/*
-data/processed/*
-!data/**/.gitkeep
-!data/external/*.csv
-*.xlsx
-~$*
 .DS_Store
+~$*
+
+# Datos crudos grandes / re-descargables
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/sp500_constituents.csv
+
+# Panel derivado: se versiona solo el universo (pequeño, útil como referencia)
+data/processed/*
+!data/processed/.gitkeep
+!data/processed/universe.csv
+
+# Datasets externos con licencia abierta: sí se versionan
+!data/external/*.csv
+
+# Excel de trabajo (los talleres viven en la carpeta de Reportes)
+*.xlsx

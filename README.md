@@ -12,6 +12,8 @@ No es una terminal de datos ni un servicio de asesoría de inversión. Es el **c
 de un diagnóstico financiero profesional: una alternativa reproducible al trabajo manual, pensada para
 sustentarse ante un comité, una junta o un cliente.
 
+📄 **Sitio del proyecto (descripción completa, arquitectura y datos):** <https://hyper-target.github.io/FinTarget/>
+
 ---
 
 ## Para qué sirve
@@ -63,11 +65,12 @@ fintarget/
   explain/    shap_report.py · company_sheet.py
   cli.py      fintarget score --company <id> --mode {listed|private}
 data/         raw/ · processed/ (panel) · external/ (datasets públicos, ver data/README.md)
+  ingest/     ... · build_universe.py (universo S&P 500 + Russell 2000)
 notebooks/    00_eda · 01_panel · 02_text · 03_fusion · 04_case_visa · 05_case_co
 tests/        golden tests anclados a los valores del taller VISA
-reports/      fichas por empresa
+reports/      eda/ (resumen del universo + figuras) · fichas por empresa
 plugin/       plugin de Claude Code (FinTech): las 6 skills + el comando de dossier
-docs/         viabilidad.md · metodología · plugin.md
+docs/         sitio del proyecto (GitHub Pages) · viabilidad.md
 ```
 
 ## Estado del proyecto
@@ -78,8 +81,10 @@ con qué evidencia y con cuánto esfuerzo.
 - [x] Propuesta formal (curso Gerencia Financiera, Maestría en Finanzas — Universidad del Norte)
 - [x] Datasets públicos localizados y verificados (rating crediticio, EDGAR-CORPUS, SEC EDGAR/XBRL)
 - [x] Skills de análisis empaquetadas como plugin de Claude Code (`plugin/`)
+- [x] Universo S&P 500 + Russell 2000 construido y primer EDA (`fintarget/ingest/build_universe.py`, `notebooks/00_eda.py`)
+- [x] Sitio del proyecto (GitHub Pages) con la descripción completa y los enlaces de datos
 - [ ] `finmetrics.py` extraído del modelo VISA + golden tests
-- [ ] `ingest/edgar.py` + `cli.py` (validar con VISA, TGLS y NVIDIA)
+- [ ] `ingest/edgar.py` + `cli.py` (validar con VISA, TGLS y Ecopetrol)
 - [ ] Panel contable S&P 500 (2010–2025) y tablero de ratios
 - [ ] Baseline de rating (LightGBM) + estudio de ablación con la capa de texto
 
