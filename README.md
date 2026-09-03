@@ -70,7 +70,7 @@ fintarget/
 data/         raw/ · processed/ (panel) · external/ (datasets públicos, ver data/README.md)
   ingest/     ... · build_universe.py (universo S&P 500 + Russell 2000)
 notebooks/    00_eda · 01_panel · 02_text · 03_fusion · 04_case_visa · 05_case_co
-tests/        golden tests anclados a los valores del taller VISA
+tests/        golden tests anclados a los valores del análisis de VISA
 reports/      eda/ (resumen del universo + figuras) · fichas por empresa
 plugin/       plugin de Claude Code (FinTech): las 6 skills + el comando de dossier
 docs/         sitio del proyecto (GitHub Pages) · viabilidad.md
@@ -81,7 +81,7 @@ docs/         sitio del proyecto (GitHub Pages) · viabilidad.md
 Fase 0 — cimientos. Ver [`docs/viabilidad.md`](docs/viabilidad.md) para el análisis de qué es factible,
 con qué evidencia y con cuánto esfuerzo.
 
-- [x] Propuesta formal (curso Gerencia Financiera, Maestría en Finanzas — Universidad del Norte)
+- [x] Documento de proyecto y análisis de viabilidad
 - [x] Datasets públicos localizados y verificados (rating crediticio, EDGAR-CORPUS, SEC EDGAR/XBRL)
 - [x] Skills de análisis empaquetadas como plugin de Claude Code (`plugin/`)
 - [x] Universo S&P 500 + Russell 2000 construido y primer EDA (`fintarget/ingest/build_universe.py`, `notebooks/00_eda.py`)
@@ -93,12 +93,12 @@ con qué evidencia y con cuánto esfuerzo.
 
 ## Origen
 
-FinTarget nace del taller de análisis financiero de VISA Inc. (2021–2025) del curso de Gerencia Financiera.
-Ese taller —análisis vertical/horizontal, ratios, WACC y EVA reconstruidos y corregidos— es el caso de
-validación y el ancla de los *golden tests* del proyecto.
+El primer caso completo de referencia de FinTarget es el análisis a fondo de VISA Inc. (2021–2025)
+—análisis vertical/horizontal, ratios, WACC y EVA—, que sirve de caso de validación y de ancla de
+los *golden tests* del proyecto.
 
 ## Licencia y uso
 
-Material académico y herramienta de trabajo. Los análisis y modelos tienen fines de diagnóstico y de
-formación; **no constituyen asesoría de inversión ni una calificación crediticia oficial**. Los datasets
+Herramienta de trabajo de código abierto. Los análisis y modelos tienen fines de diagnóstico;
+**no constituyen asesoría de inversión ni una calificación crediticia oficial**. Los datasets
 externos conservan su licencia de origen (ver [`data/README.md`](data/README.md)).

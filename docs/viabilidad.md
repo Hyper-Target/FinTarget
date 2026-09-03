@@ -1,10 +1,10 @@
 # FinTarget — análisis de viabilidad
 
-*Preparado para Andrés Saavedra Camerano · Curso de Gerencia Financiera, Maestría en Finanzas (Universidad del Norte) · Septiembre de 2026*
+*Septiembre de 2026*
 
-Este documento responde una pregunta concreta: **de todo lo que plantea la propuesta, ¿qué es realmente
-factible, con qué evidencia y con cuánto esfuerzo?** El objetivo no es un ejercicio académico sino una
-herramienta que sirva en la práctica de asesoría financiera.
+Este documento responde una pregunta concreta: **de todo lo que plantea FinTarget, ¿qué es realmente
+factible, con qué evidencia y con cuánto esfuerzo?** El objetivo no es un ejercicio teórico sino una
+herramienta que sirva en la práctica de la asesoría financiera.
 
 ---
 
@@ -14,14 +14,14 @@ herramienta que sirva en la práctica de asesoría financiera.
 |---|---|---|
 | **A. Empaquetar los análisis actuales (ratios, WACC, EVA, informes) como una herramienta de un comando** | **Factible ya** | Bajo (días) |
 | **B. Ingesta de datos abiertos (SEC EDGAR, EDGAR-CORPUS, datasets de rating)** | **Factible ya — verificado** | Bajo (días) |
-| **C. `finmetrics.py` determinista + *golden tests* del taller VISA** | **Factible ya** | Bajo–medio (1–2 semanas) |
+| **C. `finmetrics.py` determinista + *golden tests* del análisis de VISA** | **Factible ya** | Bajo–medio (1–2 semanas) |
 | **D. Modelo de rating estimado / grado de inversión + explicabilidad SHAP** | **Factible como *baseline* creíble**, no como motor de rating de producción | Medio (3–5 semanas) |
 | **E. Capa de NLP (10-K + noticias) y métrica de divergencia narrativa–fundamentales** | **Factible técnicamente; es la parte de investigación y la de mayor riesgo** | Alto (6–10 semanas) |
 | **F. "Alternativa abierta a una terminal de datos de pago"** | **Reformular** — alcance acotado, no equivalencia | — |
-| **G. Asesoría / *fair value* / recomendación de inversión** | **Fuera de alcance** (así se declara en la propuesta) | — |
+| **G. Asesoría / *fair value* / recomendación de inversión** | **Fuera de alcance** (declarado explícitamente) | — |
 
-**Recomendación:** entregar el curso con A + B + C + D. Dejar E como el capítulo de investigación (y posible
-proyecto de grado), presentado con honestidad sobre lo que puede salir nulo. Ajustar el lenguaje de F.
+**Recomendación:** construir primero A + B + C + D (el núcleo utilizable). Dejar E como la línea de
+investigación, presentada con honestidad sobre lo que puede salir nulo. Ajustar el lenguaje de F.
 
 ---
 
@@ -48,8 +48,8 @@ Dos versiones localizadas y perfiladas (mirrors en GitHub, sin necesidad de cred
 | *Corporate Credit Rating* (Agewerc/ML-Finance) | 2.029 | 593 | 2014–2016 | 25 ratios | 10 clases (AAA…D) | Kaggle |
 
 **El dato clave:** la primera versión trae el **CIK**. Eso permite unir *ratios ↔ texto del 10-K ↔ XBRL en
-vivo* por la misma llave. Es exactamente el puente que la propuesta necesita para el modelo multimodal, y
-estaba en duda hasta ahora.
+vivo* por la misma llave. Es exactamente el puente que el modelo multimodal necesita, y estaba en
+duda hasta ahora.
 
 **Limitaciones que hay que decir en voz alta:**
 - Solo 2010–2016, y la fecha es **anual** (no día): hay que tratar el riesgo de fuga temporal con cuidado
@@ -58,8 +58,8 @@ estaba en duda hasta ahora.
   y usar el resto como robustez.
 - Muy desbalanceado en las colas (AAA = 71 filas, C = 8). Un rating a 22 clases no es realista; a grado de
   inversión (binario) o a 7 grupos (AAA/AA/A/BBB/BB/B/CCC-C) sí.
-- VISA **no está** en el dataset de 5.403 → el caso VISA es validación *fuera de muestra* (que es justo lo que
-  pide la propuesta): el modelo predice y se contrasta con el rating real AA−.
+- VISA **no está** en el dataset de 5.403 → el caso VISA es validación *fuera de muestra* (justo lo
+  deseable): el modelo predice y se contrasta con el rating real AA−.
 
 ### 2.4 Bankruptcy / probabilidad de estrés
 - *US Company Bankruptcy Prediction* (utkarshx27, CC0): ~78k empresa-año, 1999–2018, 18 variables tipo Altman.
@@ -69,7 +69,7 @@ estaba en duda hasta ahora.
 
 ## 3. Empaquetar lo que ya existe: las skills como plugin
 
-Hoy hay **6 skills** de Claude Code funcionando (creadas en sesiones reales del curso):
+Hoy hay **6 skills** de Claude Code funcionando (creadas y probadas en análisis reales):
 
 | Skill | Qué produce | Naturaleza |
 |---|---|---|
@@ -120,7 +120,7 @@ o se exporta de Investing.com) — automatizarlo desde XBRL es parte de `ingest/
 
 ## 5. La capa de NLP: el capítulo de investigación
 
-Es la contribución original de la propuesta y también la de mayor riesgo:
+Es la contribución original del proyecto y también la de mayor riesgo:
 
 - **Técnicamente factible:** FinBERT sobre Item 1A / Item 7, léxico Loughran–McDonald, similitud coseno año a
   año (efecto "Lazy Prices"), métrica de divergencia `D = tono narrativo (z) − salud fundamental (z)`.
@@ -129,10 +129,9 @@ Es la contribución original de la propuesta y también la de mayor riesgo:
   2. La capa de noticias hoy es semi-manual (el reporte semanal del autor); como *feature* a nivel empresa es
      delgada. Tratarla como experimental, no como señal central.
   3. **El estudio de ablación puede dar que el texto no aporta.** Eso *sigue siendo* un resultado válido y
-     publicable — pero el profesor debe saber que ese es un desenlace posible antes de comprometerlo como
-     proyecto de grado.
+     útil — pero conviene tenerlo claro de antemano: es una hipótesis a comprobar, no un resultado garantizado.
 
-## 6. Ajustes de lenguaje recomendados en la propuesta
+## 6. Ajustes de lenguaje recomendados
 
 | Dice | Debería decir |
 |---|---|
@@ -150,7 +149,7 @@ Es la contribución original de la propuesta y también la de mayor riesgo:
 | 3 | Capa de texto (EDGAR-CORPUS) + estudio de ablación | 4–6 |
 | 4 | Modo privado (un caso anonimizado real) + informe final + *model card* | 2 |
 
-**Para el curso** basta con Fase 0–2. Fase 3–4 es el proyecto de grado.
+El **núcleo utilizable** es la Fase 0–2. La Fase 3–4 es la línea de investigación.
 
 ---
 

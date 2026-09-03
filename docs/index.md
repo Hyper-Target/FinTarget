@@ -25,9 +25,8 @@ Para un financiero eso se traduce en tres cosas concretas: **no hay licencias co
 está oculto** (todo cálculo se puede señalar y reproducir) y **la herramienta mejora con el
 tiempo** en lugar de quedar congelada.
 
-El objetivo de HyperTarget no es un ejercicio académico: es que estas herramientas **sirvan de
-verdad** —a un profesor, a un asesor, a una junta directiva, a cualquier tomador de decisiones
-financieras—.
+El objetivo de HyperTarget no es un ejercicio teórico: es que estas herramientas **sirvan de
+verdad** —a un asesor, a una junta directiva, a cualquier tomador de decisiones financieras—.
 
 ---
 
@@ -73,8 +72,8 @@ propio sector**, comparándola con las empresas parecidas de las que sí tenemos
 Las fuentes cambian —en vez de la bolsa, se usan los estados que las sociedades reportan a la
 **Superintendencia de Sociedades**, las **notas a los estados financieros** y datos del sector—
 pero el diagnóstico sigue siendo posible. Para el costo de capital, en lugar de sacar el riesgo
-del precio de la acción (que no existe), se usa el método que enseña el curso: la referencia del
-sector más la **prima de riesgo país** de Colombia.
+del precio de la acción (que no existe), se usa el método estándar de finanzas corporativas: la
+referencia del sector más la **prima de riesgo país** de Colombia.
 
 > Ya hoy tenemos **asistentes** que hacen partes de esto (ver el diccionario abajo). El siguiente
 > paso natural es **crear un asistente nuevo, específico para la empresa colombiana no cotizada**,
@@ -108,7 +107,7 @@ Un ratio financiero describe un **estado**, no una **trayectoria**. El protocolo
 dónde?"*. En la práctica, el deterioro de una empresa suele ser visible en el lenguaje de la
 gerencia y en el flujo de noticias **antes** de que los números lo reflejen del todo.
 
-> Ejemplo del propio trabajo del curso: en VISA la razón corriente cae de 1,75x a 1,08x entre
+> Un ejemplo real: en VISA la razón corriente cae de 1,75x a 1,08x entre
 > 2021 y 2025. El tramo final se explica casi por completo por la reclasificación de unos
 > US$ 5.569 millones de deuda de largo a corto plazo —un hecho que se comunica y se contextualiza
 > en la narrativa del 10-K antes de que el ratio de liquidez lo muestre. Un modelo que solo mira
@@ -166,9 +165,9 @@ que cubren el espectro relevante para la práctica de asesoría:
 
 | Caso | Perfil | Qué demuestra |
 |---|---|---|
-| **VISA Inc.** | *Large cap*, EE. UU., rating AA− | El diagnóstico completo sobre una empresa ya analizada en el taller: ROIC ≈ 47 %, WACC de mercado ≈ 7,9 %, EVA positivo y creciente, y el episodio de reclasificación de deuda de 2025. Ancla de los *golden tests*. |
+| **VISA Inc.** | *Large cap*, EE. UU., rating AA− | El diagnóstico completo sobre una empresa ya analizada a fondo: ROIC ≈ 47 %, WACC de mercado ≈ 7,9 %, EVA positivo y creciente, y el episodio de reclasificación de deuda de 2025. Ancla de verificación del sistema. |
 | **Tecnoglass (TGLS)** | *Small cap*, ADR, manufactura | Que el método viaja a empresas pequeñas y a fuentes con inconsistencias (Investing.com subestima ingresos 2021–22 frente al 10-K; se reconcilia contra SEC EDGAR). |
-| **Ecopetrol** | Emisor LatAm, control estatal | Que el método incorpora **prima de riesgo país** y datos locales (Superfinanciera / BVC), siguiendo el enfoque del curso. |
+| **Ecopetrol** | Emisor LatAm, control estatal | Que el método incorpora **prima de riesgo país** y datos locales (Superfinanciera / BVC), como exige un emisor colombiano. |
 
 ---
 
@@ -186,11 +185,11 @@ para las empresas pequeñas, que son la mayoría de las que llegan a una junta d
 
 ## Alcance y naturaleza del proyecto
 
-FinTarget nace del taller de análisis financiero de VISA Inc. del curso de **Gerencia
-Financiera** (Maestría en Finanzas, Universidad del Norte) y se concibe como herramienta de
-trabajo, con potencial de proyecto de grado.
+FinTarget es una **herramienta de trabajo** para el diagnóstico financiero. Su primer caso
+completo de referencia es el análisis a fondo de VISA Inc. (2021–2025), que sirve de ancla de
+verificación del sistema.
 
-Es **material académico y un instrumento de diagnóstico**. Los análisis y modelos **no
+Es un **instrumento de diagnóstico**, no un servicio de asesoría. Los análisis y modelos **no
 constituyen asesoría de inversión ni una calificación crediticia oficial**. El detalle de qué es
 factible hoy, con qué evidencia y con cuánto esfuerzo está en el
 [análisis de viabilidad](https://github.com/Hyper-Target/FinTarget/blob/main/docs/viabilidad.md).

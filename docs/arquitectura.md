@@ -61,13 +61,13 @@ que la explican y la lectura de narrativa frente a fundamentales.
 - **Tecnoglass (TGLS)** — *small cap*, ADR. Prueba de robustez frente a fuentes con
   inconsistencias; reconciliación contra SEC EDGAR.
 - **Ecopetrol** — emisor LatAm con control estatal. Prima de riesgo país y fuentes locales
-  (Superfinanciera, BVC), siguiendo el método del curso.
+  (Superfinanciera, BVC), como exige un emisor colombiano.
 
 ---
 
 ## 2 · Plugins FinTech (la fábrica de datos estructurados)
 
-Seis *skills* ya en funcionamiento, creadas en sesiones reales del curso. Son la **fuente del
+Seis *skills* ya en funcionamiento, creadas y probadas en análisis reales. Son la **fuente del
 material estructurado que consume el NLP Model** y la capa de entrega al analista.
 
 | Skill | Qué entrega | Tipo |

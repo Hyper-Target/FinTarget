@@ -21,7 +21,7 @@ Es una línea prioritaria, no un extra. La mayoría de las compañías de una ju
 Colombia no cotizan en bolsa: no tienen precio de acción ni informes públicos. FinTarget las
 cubre con lo mínimo que toda empresa tiene —**estados financieros, PyG y ratios**— más las fuentes
 locales (**Superintendencia de Sociedades**, notas a los estados) y el costo de capital por el
-método del curso (referencia de sector + prima de riesgo país).
+método estándar de finanzas corporativas (referencia de sector + prima de riesgo país).
 
 - **Reutiliza las skills que ya existen** (`VerticalAnalysis`, `RatioAnalysis`, `WaccModel`) sobre
   el Excel de estados de la empresa.
@@ -46,7 +46,7 @@ método del curso (referencia de sector + prima de riesgo país).
 - **No:** un motor de rating que compita con una agencia (el dataset es corto, 2010–2016, y
   mezcla agencias); precisión por escalón fino; *fair value* o recomendación de inversión.
 - El **estudio de ablación puede dar que el texto no aporta**. Sigue siendo un resultado válido —
-  y conviene tenerlo presente antes de comprometerlo como proyecto de grado.
+  y conviene tenerlo presente: es una hipótesis a comprobar, no un resultado garantizado.
 
 El análisis completo de viabilidad —qué es factible, con qué evidencia y con cuánto esfuerzo—
 está en
